@@ -1,1 +1,1 @@
-["sbt.Task[scala.collection.Seq[scala.Tuple2[java.nio.file.Path, sbt.nio.FileStamp]]]",{"hashes":[["/Users/masaya/dev/github.com/masayaO/scala-Tdd/build.sbt","061e94068576eb2ce51f62292e1bb292a90200b4"]],"lastModifiedTimes":[]}]
+["sbt.Task[scala.collection.Seq[scala.Tuple2[java.nio.file.Path, sbt.nio.FileStamp]]]",{"hashes":[["/Users/masaya/dev/github.com/masayaO/scala-Tdd/build.sbt","7507973803f881d44857747b62c637253216fe67"]],"lastModifiedTimes":[]}]
