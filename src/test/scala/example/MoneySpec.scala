@@ -16,6 +16,7 @@ class MoneySpec extends WordSpec with Matchers {
     "等しい" in {
       Dollar(5) shouldEqual Dollar(5)
       Dollar(5) should not be Dollar(6)
+      Dollar(5) should not be Franc(5)
     }
   }
 
