@@ -4,28 +4,24 @@ abstract class Money {
 
   val moneyAmount: Int
 
-}
+  val currencyUnit: Currency
 
-object Money {
-  def dollar(amount: Int) = Dollar(amount)
+  def times(multiplier: Int): Money = {
+    Currency(currencyUnit)(moneyAmount * multiplier)
+  }
 
-  def franc(amount: Int) = Franc(amount)
-}
+ }
 
 case class Dollar(private val dollarAmount: Int) extends Money {
 
-  override val moneyAmount: Int = dollarAmount
+  val currencyUnit: Currency = Currency.USD
 
-  def times(multiplier: Int): Money = {
-    Dollar(moneyAmount * multiplier)
-  }
+  override val moneyAmount: Int = dollarAmount
 }
 
 case class Franc(private val francAmount: Int) extends Money {
 
-  override val moneyAmount: Int = francAmount
+  val currencyUnit: Currency = Currency.CHF
 
-  def times(multiplier: Int): Money = {
-    Franc(moneyAmount * multiplier)
-  }
+  override val moneyAmount: Int = francAmount
 }
