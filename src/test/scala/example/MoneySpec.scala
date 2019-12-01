@@ -4,11 +4,20 @@ import org.scalatest.{Matchers, WordSpec}
 
 class MoneySpec extends WordSpec with Matchers{
 
-  "5ドルに2をかけた場合" should {
-    "10ドルになる" in {
+  "5ドルにNをかけた場合" should {
+    "5 * Nドルになる" in {
       val five = Dollar(5)
-      val expected = five.times(2)
-      expected shouldEqual Dollar(10)
+      five.times(2) shouldEqual Dollar(10)
+      five.times(3) shouldEqual Dollar(15)
     }
   }
+
+  "amountの等しい異なるオブジェクトは" should {
+    "等しい" in {
+      Dollar(5) shouldEqual Dollar(5)
+      Dollar(5) should not be Dollar(6)
+    }
+  }
+
+
 }
